@@ -18,7 +18,7 @@ function buildMetadata(sample) {
     panel.html("");
 
     Object.entries(resultArray).forEach(([key, value]) => {
-      panel.append("h6").text(`${key}: ${value}`);
+      panel.append("h6").text(`${key.toUpperCase()}: ${value}`);
     });
   });
 }
