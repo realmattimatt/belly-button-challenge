@@ -13,7 +13,7 @@
 
 * Bubble Chart: Visualizes all bacteria cultures found in the selected individual
 
-## Technologies / Dependancies Needed and Used
+## Technologies / Dependancies Needed and Used:
 * JavaScript
 
 * D3.js for data handling
@@ -24,7 +24,7 @@
 
 * GitHub Pages for deployment
 
-## How to Run
+## How to Run:
 ###
 1. Visit the deployed application at: [[My GitHub Belly Button Challenge URL](https://github.com/realmattimatt/belly-button-challenge.git)]
 
@@ -34,19 +34,19 @@
 
 
 ## Visualizations
-### Bar Chart
+### Bar Chart:
 ![Top 10 Bacteria Cultures](images/bar_chart.png)
 
-### Bubble Chart
+### Bubble Chart:
 ![Bacteria Cultures Per Sample](images/bubble_chart.png)
 
 
-## Data Source
+## Data Source:
 The data used in this dashboard is sourced from the Belly Button Biodiversity dataset.
 
 
-### Visualization Details
-#### Bar Chart
+### Visualization Details:
+#### Bar Chart:
 
 * Displays top 10 OTUs found in the selected
 individual
@@ -57,7 +57,7 @@ individual
 
 * Uses otu_labels as hovertext
 
-#### Bubble Chart
+#### Bubble Chart:
 * Displays all bacteria cultures found
 
 * X values: otu_ids
@@ -70,3 +70,32 @@ individual
 
 * Text values: otu_labels
 
+### Development Process:
+1. Set up GitHub repository and basic file structure
+2. Created initial HTML layout
+3. Implemented data loading using D3.js
+4. Created dropdown menu and event handling
+5. Developed visualization components
+6. Added styling and finalized layout
+7. Deployed to GitHub Pages
+   
+
+### Sources:
+
+* d3.js on W3 Schools [d3.js](https://www.w3schools.com/js/js_graphics_d3js.asp)
+* Plotly.js @ [Plotly.js](https://plotly.com/javascript/)
+* HTML on W3 Schools [HTML](https://www.w3schools.com/html/)
+* CSS on W3 Schools [CSS](https://www.w3schools.com/css/)
+* Office hours / Bootcamp instructional team for guidance and support
+* Xpert Learning Assistant
+* Tutor Carlos Gattorno
+* ChatGPT
+
+### License:
+This project is licensed under the GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 - see the LICENSE file for details
+
+Matthew Matti
+
+
+
+ 
