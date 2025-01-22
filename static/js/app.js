@@ -3,9 +3,7 @@ function buildMetadata(sample) {
   d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").then((data) => {
 
     // get the metadata field
-    // let sampleValueDesired = 940; may need to delete this line. 
     let metadata = data.metadata;
-    //    console.log("Metadata array:", metadata);
     // Find the metadata object for the desired sample
     // We use find() because we want exactly one object that matches our sample id
     // Note: sample is passed in as a string, but metadata.id is a number, so we use parseInt()
@@ -28,29 +26,7 @@ function buildMetadata(sample) {
 
      // Inside a loop, you will need to use d3 to append new
     // tags for each key-value in the filtered metadata.
-  function displayMetadata(result, PANEL) {
-      // Clear any existing metadata first
-    PANEL.html("");
-      
-      // Create a container for our metadata
-    for (let key in result) {
-      // Format the value based on what type of data it is
-      let value = result[key];
-      let displayValue = value;
-          
-      // Special formatting for certain types of data
-      if (key === "age") {
-          displayValue = `${value} years`;
-      } else if (key === "wfreq") {
-          displayValue = `${value} times per week`;
-      }
-          
-          // Create and append the formatted text
-      PANEL.append("h6")
-          .text(`${key.toUpperCase()}: ${displayValue}`)
-          .style("margin", "5px 0"); // Add some spacing between lines
-  }
-}
+
   function buildCharts(sample) {
     d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").then((data) => {
       // Get the samples array from the data
@@ -64,7 +40,7 @@ function buildMetadata(sample) {
       let otu_labels = resultArray.otu_labels;
       let sample_values = resultArray.sample_values;
       
-      // Let's add some console logs to understand our data
+      // Let's add some console logs to understand our data as needed
       // console.log("Sample values:", sample_values);
       // console.log("OTU IDs:", otu_ids);
       // console.log("OTU Labels:", otu_labels);
@@ -85,8 +61,10 @@ function buildMetadata(sample) {
     // Create the layout for the bar chart
     let barLayout = {
       title: "Top 10 Bacteria Cultures Found",
-      margin: { t: 30, l: 150 }
+      margin: { t: 30, l: 150 },
+      autosize: true
     };
+    
 
     // Plot the bar chart
     Plotly.newPlot("bar", barData, barLayout);
